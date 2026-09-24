@@ -25,25 +25,26 @@ class Player:
 
     def toss_coin(self):
         """ This method tells the player's coin to toss itself"""
-        pass
+        self.coin.toss()
 
     def get_coin_side(self):
         """This method gets the side of the payer's coin by calling the coin's get_sideup() method and retuning its value"""
-        pass
+        return self.coin.get_sideup()
 
     def win_coin(self):
         """Adds 1 to the wallet"""
-        pass
+        self.wallet = self.wallet + 1
 
     def lose_coin(self):
         """Subtracts 1 from the wallet"""
-        pass
+        self.wallet = self.wallet - 1 
 
     def get_wallet(self):
         """Returns the current value of wallet"""
-        pass
+        return self.wallet
 
     def get_name(self):
         """Returns the current value of name"""
+        return self.name
         pass
         

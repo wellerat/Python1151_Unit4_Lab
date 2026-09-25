@@ -18,7 +18,7 @@ class Coin:
     """This class represents a single, tossable coin.  """
 
     def __init__(self):
-        """Initialize the addtibutes of coin"""
+        """Initialize the attributes of coin"""
         self.sideup = "Heads"
 
     def toss(self):

@@ -23,8 +23,11 @@ def main():
 
     print("\n--- Coin Match Game ---")
 
-    p1 = Player("1")
-    p2 = Player("2")
+    name1 = input("Enter name for Player 1:  ")
+    name2 = input("Enter name for Player 2:  ")
+
+    p1 = Player(name1)
+    p2 = Player(name2)
 
     print(f"Player {p1.get_name()} has {p1.get_wallet()} coins")
     print(f"Player {p2.get_name()} has {p2.get_wallet()} coins")
@@ -56,6 +59,13 @@ def main():
 
             print(f"Player {p1.get_name()} has {p1.get_wallet()} coins")
             print(f"Player {p2.get_name()} has {p2.get_wallet()} coins")
+
+            if p1.get_wallet() == 0:
+                print(f"Player {p1.get_name()} has zero coins, and is the loser, GAME OVER!")
+                continue_game=False
+            elif p2.get_wallet() == 0:
+                 print(f"Player {p2.get_name()} has zero coins, and is the loser, GAME OVER!")
+                 continue_game=False   
 
         elif coin_toss == 'n':
             print("---   Final Score   ---")
